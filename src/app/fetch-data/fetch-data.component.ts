@@ -7,19 +7,17 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fetch-data.component.css']
 })
 export class FetchDataComponent {
-  public forecasts:Weatherforecast[] =[];
-  baseurl = "https://localhost:7276/WeatherForecast";
+  public forecasts:WeatherForecast[] =[];
+  baseurl = "https://localhost:7276/NovelLibary";
   constructor(http: HttpClient) {
-      http.get<Weatherforecast[]>(this.baseurl+'weatherforecast').subscribe(result=>
-      this.forecasts = result);
+    http.get<WeatherForecast[]>(this.baseurl).subscribe(result=>
+    this.forecasts = result);
    }error = console.error();
 
-
-
 }
-interface Weatherforecast{
-  data: string
+interface WeatherForecast {
+  date: string;
   temperatureC: number;
-  temperatureF: number;
   summary: string;
 }
+
