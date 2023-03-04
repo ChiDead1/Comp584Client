@@ -6,15 +6,15 @@
 <table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts.length">
   <thead>
     <tr>
-      <th>Date</th>
+      <th>Novel Name</th>
       <th>Chapters</th>
-      <th>Summary</th>
+      <th>Genre</th>
     </tr>
   </thead>
   <tbody>
     <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.date }}</td>
-      <td>{{ forecast.temperatureC }}</td>
+      <td>{{ forecast.sumName }}</td>
+      <td>{{ forecast.chapters }}</td>
       <td>{{ forecast.summary }}</td>
     </tr>
   </tbody>

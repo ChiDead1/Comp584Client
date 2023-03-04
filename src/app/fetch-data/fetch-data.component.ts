@@ -16,8 +16,8 @@ export class FetchDataComponent {
 
 }
 interface WeatherForecast {
-  date: string;
-  temperatureC: number;
+  sumName: string;
+  chapters: number;
   summary: string;
 }
 

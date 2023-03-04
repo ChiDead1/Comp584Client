@@ -5,7 +5,7 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
-import { CounterComponent } from './counter/counter.component';
+import { saveNovelReadComponent } from './saveNovelRead/saveNovelRead.component';
 import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'
@@ -17,7 +17,7 @@ import { HttpClientModule } from '@angular/common/http'
     AppComponent,
     NavBarComponent,
     HomeComponent,
-    CounterComponent,
+    saveNovelReadComponent,
     FetchDataComponent
     
   ],
