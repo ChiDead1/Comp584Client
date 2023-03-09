@@ -8,7 +8,7 @@ import { Component, OnInit } from '@angular/core';
 })
 export class FetchDataComponent {
   public forecasts:WeatherForecast[] =[];
-  baseurl = "https://localhost:7276/NovelLibary";
+  baseurl = "https://localhost:7276/api/EasternNovel";
   constructor(http: HttpClient) {
     http.get<WeatherForecast[]>(this.baseurl).subscribe(result=>
     this.forecasts = result);
