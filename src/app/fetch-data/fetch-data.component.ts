@@ -7,15 +7,15 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./fetch-data.component.css']
 })
 export class FetchDataComponent {
-  public forecasts:WeatherForecast[] =[];
+  public easternNovel:easternNovelData[] =[];
   baseurl = "https://localhost:7276/api/EasternNovel";
   constructor(http: HttpClient) {
-    http.get<WeatherForecast[]>(this.baseurl).subscribe(result=>
-    this.forecasts = result);
+    http.get<easternNovelData[]>(this.baseurl).subscribe(result=>
+    this.easternNovel = result);
    }error = console.error();
 
 }
-interface WeatherForecast {
+interface easternNovelData{
   sumName: string;
   chapters: number;
   summary: string;

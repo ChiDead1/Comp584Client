@@ -1,9 +1,9 @@
 <h1 id="tableLabel">Novel Libary</h1>
 
 
-<p *ngIf="!forecasts?.length"><em>Loading...</em></p>
+<p *ngIf="!easternNovel?.length"><em>Loading...</em></p>
 
-<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="forecasts.length">
+<table class='table table-striped' aria-labelledby="tableLabel" *ngIf="easternNovel.length">
   <thead>
     <tr>
       <th>Novel Name</th>
@@ -12,10 +12,10 @@
     </tr>
   </thead>
   <tbody>
-    <tr *ngFor="let forecast of forecasts">
-      <td>{{ forecast.sumName }}</td>
-      <td>{{ forecast.chapters }}</td>
-      <td>{{ forecast.summary }}</td>
+    <tr *ngFor="let easternNovel">
+      <td>{{ easternNovel.sumName }}</td>
+      <td>{{ easternNovel.chapters }}</td>
+      <td>{{ easternNovel.summary }}</td>
     </tr>
   </tbody>
 </table>
