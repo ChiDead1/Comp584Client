@@ -6,19 +6,20 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { HomeComponent } from './home/home.component';
 import { saveNovelReadComponent } from './saveNovelRead/saveNovelRead.component';
-import { FetchDataComponent } from './fetch-data/fetch-data.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button'
-import { HttpClientModule } from '@angular/common/http'
+import { HttpClientModule } from '@angular/common/http';
+import { NovelLibaryComponent } from './novel-libary/novel-libary.component'
+import { AngularMaterialModule } from './angular-material.moudle';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomeComponent,
     saveNovelReadComponent,
-    FetchDataComponent
+    NovelLibaryComponent
     
   ],
   imports: [
@@ -28,7 +29,8 @@ import { HttpClientModule } from '@angular/common/http'
     MatToolbarModule,
     MatIconModule,
     MatButtonModule,
-    HttpClientModule
+    HttpClientModule,
+    AngularMaterialModule
   ],
   providers: [],
   bootstrap: [AppComponent]
