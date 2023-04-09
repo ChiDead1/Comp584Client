@@ -12,20 +12,19 @@
     <th mat-header-cell *matHeaderCellDef>Novwl Name</th>
     <td mat-cell *matCellDef="let EasternNovel">{{EasternNovel.name}}</td>
   </ng-container>
-  <!-- Lat Column -->
-  <ng-container matColumnDef="lat">
-    <th mat-header-cell *matHeaderCellDef>Chapters</th>
-    <td mat-cell *matCellDef="let EasternNovel">{{EasternNovel.lat}}</td>
+  <!-- chapter Column -->
+  <ng-container matColumnDef="chapter">
+    <th mat-header-cell *matHeaderCellDef>Chapter</th>
+    <td mat-cell *matCellDef="let EasternNovel">{{EasternNovel.chapter}}</td>
   </ng-container>
-  <!-- Lon Column -->
-  <ng-container matColumnDef="lon">
+  <!-- author Column -->
+  <ng-container matColumnDef="author">
     <th mat-header-cell *matHeaderCellDef>Author</th>
-    <td mat-cell *matCellDef="let EasternNovel">{{EasternNovel.lon}}</td>
+    <td mat-cell *matCellDef="let EasternNovel">{{EasternNovel.author}}</td>
   </ng-container>
   <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
   <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
 </table>
-
 
 <!-- Pagination directive -->
 <mat-paginator *ngIf="EasternNovel"

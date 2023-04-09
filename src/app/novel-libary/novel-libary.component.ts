@@ -7,17 +7,17 @@ import { MatPaginator, PageEvent } from '@angular/material/paginator';
 export interface EasternNovel {
   id: number;
   name: string;
-  lat: number;
-  lon: number;
+  chapter: number;
+  author: number;
 }
-
+  
 @Component({
   selector: 'app-novel-libary',
   templateUrl: './novel-libary.component.html',
   styleUrls: ['./novel-libary.component.css']
 })
 export class NovelLibaryComponent implements OnInit {
-  public displayedColumns: string[] = ['id', 'name', 'lat', 'lon'];
+  public displayedColumns: string[] = ['id', 'name', 'chapter', 'author'];
   public EasternNovel2!: MatTableDataSource<EasternNovel>;
   @ViewChild(MatPaginator) paginator!: MatPaginator;
   public EasternNovel: EasternNovel[] = [];
