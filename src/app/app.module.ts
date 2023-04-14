@@ -10,16 +10,19 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatToolbarModule } from '@angular/material/toolbar'
 import { MatIconModule } from '@angular/material/icon'
 import { MatButtonModule } from '@angular/material/button'
-import { HttpClientModule } from '@angular/common/http';
+import { HTTP_INTERCEPTORS, HttpClientModule } from '@angular/common/http';
 import { NovelLibaryComponent } from './novel-libary/novel-libary.component'
 import { AngularMaterialModule } from './angular-material.moudle';
+import { LoginComponent } from './login/login.component';
+import { AuthInterceptor } from './login/auth.interceptor';
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     HomeComponent,
     saveNovelReadComponent,
-    NovelLibaryComponent
+    NovelLibaryComponent,
+    LoginComponent
     
   ],
   imports: [
@@ -32,7 +35,9 @@ import { AngularMaterialModule } from './angular-material.moudle';
     HttpClientModule,
     AngularMaterialModule
   ],
-  providers: [],
+  providers: [
+    { provide: HTTP_INTERCEPTORS, useClass: AuthInterceptor, multi: true }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
